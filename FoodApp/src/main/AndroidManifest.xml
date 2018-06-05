@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bartek.foodscanner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    //uprawnienia dla skanera
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA2" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    SurfaceHolder surfaceHolder = surfaceView.getHolder();
+    surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Healthy Food"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".findFood"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".scanFood"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".addFood"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DeleteFood"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
